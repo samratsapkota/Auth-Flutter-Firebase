@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "857659719697",
+    "project_id": "mvp-loco",
+    "storage_bucket": "mvp-loco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857659719697:android:fb76df888a9b5c9f1eb1b0",
+        "android_client_info": {
+          "package_name": "com.example.modernlogintute"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn0lbvcXBs_DumwqZQxsvnqBHhnb686iw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
