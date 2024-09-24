@@ -1,40 +1,35 @@
-name: Flutter CI
 
+
+name: Flutter CI
 on:
   push:
     branches:
-      - main  # or the branch you want to use
+      - main
   pull_request:
     branches:
       - main
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v3  # Ensure this is the latest version
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v3  # Ensure this is the latest version
         with:
           java-version: '11'  # or any version your app requires
-
+          distribution: 'adopt'  # Specify the distribution
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.0.0'  # specify your desired Flutter version
-
+          flutter-version: '3.0.0'
       - name: Install Dependencies
         run: flutter pub get
-
       - name: Build APK
         run: flutter build apk --release
-
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3  # Ensure this is the latest version
         with:
           name: my_flutter_app_apk
-          path: build/app/outputs/flutter-apk/app-relea.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
